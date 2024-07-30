@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style3.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-************************************" crossorigin="anonymous" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="chat">
+        <div class="chat-box">
+            <div class="messages" id="messages">
+                {% for message in conversation_history %}
+                    {% if message.user %}
+                        <div class="message">
+                            <div class="user-messages">
+                                <div class="profile">
+                                    <i class="fas fa-user"></i>
+                                    <p>USER</p>
+                                </div>
+                                <p class="mess">{{ message.user }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if message.bot %}
+                        <div class="message">
+                            <div class="bot-messages">
+                                <div class="profile">
+                                    <i class="fas fa-robot robo"></i>
+                                    <p>BOT</p>
+                                </div>
+                                <p class="mess">{{ message.bot }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="loading-spinner" id="loading-spinner" style="display:none;">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+            <p class="load" id="listen">Listening ...</p>
+            <form id="chat-form" action="/chat" method="post">
+                <input type="text" id="user" name="user" placeholder="Ask Something..." autofocus required>
+                <p id="start-recognition"><i class="fas fa-microphone"></i></p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>

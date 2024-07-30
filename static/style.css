@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  top: 0;
+  left: 0;
+  background: rgb(238, 238, 238);
+  height: 100vh;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 100px;
+    width: 100%;
+}
+.header h1 {
+    font-size: 3rem;
+    color: blue;
+    margin-left: 10px;
+}
+.header .right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.header .right p {
+    cursor: pointer;
+    margin: 20px;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+.header .right p:hover {
+    color: blue;
+}
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.body .left img{
+    width: 200px;
+    height: 200px;
+}
+.body .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin-left: 100px;
+}
+.body button, .body a {
+    text-decoration: none;
+    background: blue;
+    padding: 10px 30px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.5s ease;
+    margin: 10px;
+}
+.body button:hover, .body a:hover {
+    background: transparent;
+    color: blue;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+.inputs form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inputs p {
+    font-weight: 500;
+}
+.inputs input {
+    margin: 20px;
+}
